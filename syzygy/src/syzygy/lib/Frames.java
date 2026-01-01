@@ -21,6 +21,14 @@ public class Frames implements IFrames {
 			this.horizontal_connector = "═";
 			this.vertical_connector = "║";
 		}
+		else if(FrameTypes.SINGLE_FRAME == type) {
+			this.upper_left_corner = "┌";
+			this.upper_right_corner = "┐";
+			this.lower_left_corner = "└";
+			this.lower_right_corner = "┘";
+			this.horizontal_connector = "─";
+			this.vertical_connector = "│";
+		}
 	}
 	
 	
