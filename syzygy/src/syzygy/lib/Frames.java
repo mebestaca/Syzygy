@@ -51,4 +51,36 @@ public class Frames implements IFrames {
 			this.vertical_connector = custom.getVerticalConnector();
 		}
 	}
+
+	public int getlPad() {
+		return lPad;
+	}
+
+	public int getrPad() {
+		return rPad;
+	}
+
+	public String getUpper_left_corner() {
+		return upper_left_corner;
+	}
+
+	public String getUpper_right_corner() {
+		return upper_right_corner;
+	}
+
+	public String getLower_left_corner() {
+		return lower_left_corner;
+	}
+
+	public String getLower_right_corner() {
+		return lower_right_corner;
+	}
+
+	public String getHorizontal_connector() {
+		return horizontal_connector;
+	}
+
+	public String getVertical_connector() {
+		return vertical_connector;
+	}
 }
