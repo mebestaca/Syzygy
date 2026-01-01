@@ -18,22 +18,22 @@ public class FrameCustom {
 		this.vertical_connector = builder.vertical_connector;
 	}
 	
-	public String getUpper_left_corner() {
+	public String getUpperLeftCorner() {
 		return upper_left_corner;
 	}
-	public String getUpper_right_corner() {
+	public String getUpperRightCorner() {
 		return upper_right_corner;
 	}
-	public String getLower_left_corner() {
+	public String getLowerLeftCorner() {
 		return lower_left_corner;
 	}
-	public String getLower_right_corner() {
+	public String getLowerRightCorner() {
 		return lower_right_corner;
 	}
-	public String getHorizontal_connector() {
+	public String getHorizontalConnector() {
 		return horizontal_connector;
 	}
-	public String getVertical_connector() {
+	public String getVerticalConnector() {
 		return vertical_connector;
 	}
 	

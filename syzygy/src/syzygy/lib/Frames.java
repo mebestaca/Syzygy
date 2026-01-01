@@ -1,15 +1,28 @@
 package syzygy.lib;
 
 public class Frames implements IFrames {
-	private static int left_pad = 0;
-	private static int right_pad = 0;
-	
+	private int lPad;
+	private int rPad;
 	private String upper_left_corner;
 	private String upper_right_corner;
 	private String lower_left_corner;
 	private String lower_right_corner;
 	private String horizontal_connector;
 	private String vertical_connector;
+	
+	public Frames() {
+		this(0, 0);
+	}
+	
+	public Frames(int lPad, int rPad) {
+		this(lPad, rPad, FrameTypes.DOUBLE_FRAME, null);
+	}
+	
+	public Frames(int lPad, int rPad, FrameTypes type,  FrameCustom custom) {
+		this.lPad = lPad;
+		this.rPad = rPad;
+		configureStyle(type, custom);
+	}
 	
 	@Override
 	public void configureStyle(FrameTypes type, FrameCustom custom) {
@@ -29,7 +42,13 @@ public class Frames implements IFrames {
 			this.horizontal_connector = "─";
 			this.vertical_connector = "│";
 		}
+		else if (FrameTypes.CUSTOM == type && custom != null) {
+			this.upper_left_corner = custom.getUpperLeftCorner();
+			this.upper_right_corner = custom.getUpperRightCorner();
+			this.lower_left_corner = custom.getLowerLeftCorner();
+			this.lower_right_corner = custom.getLowerRightCorner();
+			this.horizontal_connector = custom.getHorizontalConnector();
+			this.vertical_connector = custom.getVerticalConnector();
+		}
 	}
-	
-	
 }
