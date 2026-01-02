@@ -83,4 +83,9 @@ public class Frames implements IFrames {
 	public String getVertical_connector() {
 		return vertical_connector;
 	}
+
+	@Override
+	public void compose(String prompt) {
+		
+	}
 }
