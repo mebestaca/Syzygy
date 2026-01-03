@@ -3,12 +3,12 @@ package syzygy.lib;
 public class Frames implements IFrames {
 	private int lPad;
 	private int rPad;
-	private String upper_left_corner;
-	private String upper_right_corner;
-	private String lower_left_corner;
-	private String lower_right_corner;
-	private String horizontal_connector;
-	private String vertical_connector;
+	private String upperLeftCorner;
+	private String upperRightCorner;
+	private String lowerLeftCorner;
+	private String lowerRightCorner;
+	private String horizontalConnector;
+	private String verticalConnector; 
 	
 	public Frames() {
 		this(0, 0);
@@ -27,28 +27,28 @@ public class Frames implements IFrames {
 	@Override
 	public void configureStyle(FrameTypes type, FrameCustom custom) {
 		if (FrameTypes.DOUBLE_FRAME == type) {
-			this.upper_left_corner = "╔";
-			this.upper_right_corner = "╗";
-			this.lower_left_corner = "╚";
-			this.lower_right_corner = "╝";
-			this.horizontal_connector = "═";
-			this.vertical_connector = "║";
+			this.upperLeftCorner = "╔";
+			this.upperRightCorner = "╗";
+			this.lowerLeftCorner = "╚";
+			this.lowerRightCorner = "╝";
+			this.horizontalConnector = "═";
+			this.verticalConnector = "║";
 		}
 		else if(FrameTypes.SINGLE_FRAME == type) {
-			this.upper_left_corner = "┌";
-			this.upper_right_corner = "┐";
-			this.lower_left_corner = "└";
-			this.lower_right_corner = "┘";
-			this.horizontal_connector = "─";
-			this.vertical_connector = "│";
+			this.upperLeftCorner = "┌";
+			this.upperRightCorner = "┐";
+			this.lowerLeftCorner = "└";
+			this.lowerRightCorner = "┘";
+			this.horizontalConnector = "─";
+			this.verticalConnector = "│";
 		}
 		else if (FrameTypes.CUSTOM == type && custom != null) {
-			this.upper_left_corner = custom.getUpperLeftCorner();
-			this.upper_right_corner = custom.getUpperRightCorner();
-			this.lower_left_corner = custom.getLowerLeftCorner();
-			this.lower_right_corner = custom.getLowerRightCorner();
-			this.horizontal_connector = custom.getHorizontalConnector();
-			this.vertical_connector = custom.getVerticalConnector();
+			this.upperLeftCorner = custom.getUpperLeftCorner();
+			this.upperRightCorner = custom.getUpperRightCorner();
+			this.lowerLeftCorner = custom.getLowerLeftCorner();
+			this.lowerRightCorner = custom.getLowerRightCorner();
+			this.horizontalConnector = custom.getHorizontalConnector();
+			this.verticalConnector = custom.getVerticalConnector();
 		}
 	}
 
@@ -61,27 +61,27 @@ public class Frames implements IFrames {
 	}
 
 	public String getUpper_left_corner() {
-		return upper_left_corner;
+		return upperLeftCorner;
 	}
 
 	public String getUpper_right_corner() {
-		return upper_right_corner;
+		return upperRightCorner;
 	}
 
 	public String getLower_left_corner() {
-		return lower_left_corner;
+		return lowerLeftCorner;
 	}
 
 	public String getLower_right_corner() {
-		return lower_right_corner;
+		return lowerRightCorner;
 	}
 
 	public String getHorizontal_connector() {
-		return horizontal_connector;
+		return horizontalConnector;
 	}
 
 	public String getVertical_connector() {
-		return vertical_connector;
+		return verticalConnector;
 	}
 
 	@Override
