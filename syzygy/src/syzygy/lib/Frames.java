@@ -9,6 +9,11 @@ public class Frames implements IFrames {
 	private String lowerRightCorner;
 	private String horizontalConnector;
 	private String verticalConnector; 
+	private String crossConnector;
+	private String leftVerticalConnector;
+	private String rightVerticalConnector;
+	private String topHorizontalConnector;
+	private String bottomhorizontalConnector;
 	
 	public Frames() {
 		this(0, 0);
