@@ -38,6 +38,11 @@ public class Frames implements IFrames {
 			this.lowerRightCorner = "╝";
 			this.horizontalConnector = "═";
 			this.verticalConnector = "║";
+			this.crossConnector = "╬";
+			this.leftVerticalConnector = "╠";
+			this.rightVerticalConnector = "╣";
+			this.topHorizontalConnector = "╦";
+			this.bottomhorizontalConnector = "╩";
 		}
 		else if(FrameTypes.SINGLE_FRAME == type) {
 			this.upperLeftCorner = "┌";
@@ -46,6 +51,11 @@ public class Frames implements IFrames {
 			this.lowerRightCorner = "┘";
 			this.horizontalConnector = "─";
 			this.verticalConnector = "│";
+			this.crossConnector = "┼";
+			this.leftVerticalConnector = "├";
+			this.rightVerticalConnector = "┤";
+			this.topHorizontalConnector = "┬";
+			this.bottomhorizontalConnector = "┴";
 		}
 		else if (FrameTypes.CUSTOM == type && custom != null) {
 			this.upperLeftCorner = custom.getUpperLeftCorner();
@@ -87,6 +97,26 @@ public class Frames implements IFrames {
 
 	public String getVertical_connector() {
 		return verticalConnector;
+	}
+
+	public String getCrossConnector() {
+		return crossConnector;
+	}
+
+	public String getLeftVerticalConnector() {
+		return leftVerticalConnector;
+	}
+
+	public String getRightVerticalConnector() {
+		return rightVerticalConnector;
+	}
+
+	public String getTopHorizontalConnector() {
+		return topHorizontalConnector;
+	}
+
+	public String getBottomhorizontalConnector() {
+		return bottomhorizontalConnector;
 	}
 
 	@Override
